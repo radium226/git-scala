@@ -8,14 +8,15 @@ ThisBuild / scalacOptions ++= Seq(
   "-unchecked",
   "-language:postfixOps",
   "-language:higherKinds",
-  "-Ymacro-annotations"
+  "-Ymacro-annotations"/*,
+  "-Ymacro-debug-lite"*/
 )
 
 libraryDependencies ++= Seq(
   "org.typelevel" %% "cats-core" % "2.0.0",
   "org.typelevel" %% "cats-effect" % "2.0.0",
-  "org.typelevel" %% "cats-free" % "2.0.0",
-  "org.typelevel" %% "cats-tagless-macros" % "0.10"
+  "org.typelevel" %% "cats-tagless-macros" % "0.10",
+  "com.chuusai" %% "shapeless" % "2.3.3"
 )
 
 addCompilerPlugin("org.typelevel" %% "kind-projector" % "0.11.0" cross CrossVersion.full)
